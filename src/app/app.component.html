@@ -1,13 +1,19 @@
-<div class="container mt-5 p-4 d-flex gap-5">
-  <div class="d-flex flex-column gap-4" style="width: 30%;">
-    <app-user-input
-      [username]="'Juan'"
-      (messageSent)="onMessageSent($event)"
-    ></app-user-input>
-    <app-user-input
-      [username]="'María'"
-      (messageSent)="onMessageSent($event)"
-    ></app-user-input>
+<div class="container mt-5 p-4">
+  <h1 class="mb-4">Chat Challenge</h1>
+  <div class="d-flex gap-5">
+    <div class="d-flex flex-column gap-4" style="width: 30%">
+      <app-user-input
+        [username]="'Juan'"
+        (messageSent)="onMessageSent($event)"
+      ></app-user-input>
+      <app-user-input
+        [username]="'María'"
+        (messageSent)="onMessageSent($event)"
+      ></app-user-input>
+    </div>
+    <app-message-list
+      style="width: 70%"
+      [userMessagesList]="userMessagesList"
+    ></app-message-list>
   </div>
-  <app-message-list style="width: 70%;" [userMessagesList]="userMessagesList"></app-message-list>
 </div>
