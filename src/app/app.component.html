@@ -1,0 +1,14 @@
+<app-user-input
+  [username]="'Juan'"
+  (messageSent)="onMessageSent($event)"
+></app-user-input>
+<app-user-input
+  [username]="'María'"
+  (messageSent)="onMessageSent($event)"
+></app-user-input>
+
+<ul>
+  @for (userMessage of userMessagesList; track userMessage.username) {
+  <li>{{ userMessage.username }}: {{ userMessage.messageText }}</li>
+  }
+</ul>
