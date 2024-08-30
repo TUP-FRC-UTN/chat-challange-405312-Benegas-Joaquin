@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { UserMessage } from '../models/user-message';
+import { UserMessage } from '../../models/user-message';
 import { FormsModule } from '@angular/forms';
 
 @Component({

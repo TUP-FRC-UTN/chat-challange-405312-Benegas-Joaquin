@@ -1,12 +1,13 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { UserInputComponent } from './user-input/user-input.component';
+import { UserInputComponent } from './components/user-input/user-input.component';
 import { UserMessage } from './models/user-message';
+import { MessageListComponent } from "./components/message-list/message-list.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, UserInputComponent],
+  imports: [RouterOutlet, UserInputComponent, MessageListComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })

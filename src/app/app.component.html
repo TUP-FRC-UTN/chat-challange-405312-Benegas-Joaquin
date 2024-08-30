@@ -1,14 +1,13 @@
-<app-user-input
-  [username]="'Juan'"
-  (messageSent)="onMessageSent($event)"
-></app-user-input>
-<app-user-input
-  [username]="'María'"
-  (messageSent)="onMessageSent($event)"
-></app-user-input>
-
-<ul>
-  @for (userMessage of userMessagesList; track userMessage.username) {
-  <li>{{ userMessage.username }}: {{ userMessage.messageText }}</li>
-  }
-</ul>
+<div class="container mt-5 p-4 d-flex gap-5">
+  <div class="d-flex flex-column gap-4" style="width: 30%;">
+    <app-user-input
+      [username]="'Juan'"
+      (messageSent)="onMessageSent($event)"
+    ></app-user-input>
+    <app-user-input
+      [username]="'María'"
+      (messageSent)="onMessageSent($event)"
+    ></app-user-input>
+  </div>
+  <app-message-list style="width: 70%;" [userMessagesList]="userMessagesList"></app-message-list>
+</div>

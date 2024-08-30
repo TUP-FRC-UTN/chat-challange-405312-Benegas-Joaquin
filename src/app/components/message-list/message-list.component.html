@@ -1,0 +1,21 @@
+<div class="card" style="height: 460px; overflow-y: scroll;">
+  <div class="card-header">
+    <h5 class="card-title">Chat</h5>
+  </div>
+  <div class="card-body">
+    <ul>
+      @for (userMessage of userMessagesList; track userMessage.username) {
+      <li
+        class="list-group-item text-white"
+        [ngClass]="{
+          'bg-primary': userMessage.username === 'Juan',
+          'bg-secondary': userMessage.username === 'María'
+        }"
+      >
+        <strong>{{ userMessage.username }}:</strong>
+        {{ userMessage.messageText }}
+      </li>
+      }
+    </ul>
+  </div>
+</div>
